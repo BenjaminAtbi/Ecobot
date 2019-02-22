@@ -1,10 +1,17 @@
-from gpiozero import Motor
+from gpiozero import Servo
 from time import sleep
 
-motor1 = Motor(forward = 4, backward = 4*-1)
+myServo = Servo(4)
 #motor2 = motor(17)
-
-motor1.forward()
-sleep(5)
+while True:
+    myServo.mid()
+    sleep(1)
+    myServo.min()
+    sleep(1)
+    myServo.mid()
+    sleep(1)
+    myServo.max()
+    sleep(1)
+    
 #motor2.forward()
 #sleep(1)
