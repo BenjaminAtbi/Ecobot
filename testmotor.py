@@ -1,6 +1,6 @@
 from gpiozero import Servo
 from time import sleep
-myGPIO = 11
+myGPIO = 17
 myServo = Servo(myGPIO)
 #motor2 = motor(17)
 while True:
