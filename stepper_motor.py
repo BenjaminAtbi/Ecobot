@@ -48,7 +48,7 @@ while True:                          # Start main loop
             xPin.on()
             yPin.on()
         else:
-            y.Pin.off()
+            yPin.off()
             xPin.off()
     stepCounter += stepDir
     if (stepCounter >= stepCount):
