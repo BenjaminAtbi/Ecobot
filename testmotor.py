@@ -1,7 +1,7 @@
 from gpiozero import Motor
 from time import sleep
 
-motor1 = Motor(forward = 4, backward = 2)
+motor1 = Motor(forward = 4, backward = None)
 #motor2 = motor(17)
 
 motor1.forward()
