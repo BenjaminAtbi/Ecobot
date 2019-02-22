@@ -1,4 +1,4 @@
-from gpiozero import Robot, DistanceSensor
+from gpiozero import Motor
 from time import sleep
 
 motor1 = Motor(4, 6)
