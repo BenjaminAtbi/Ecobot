@@ -13,7 +13,7 @@ IN6 = stepper(6)
 IN7 = stepper(19)
 IN8 = stepper(26)
 #stepPins = [IN1,IN2,IN3,IN4] # Motor GPIO pins</p><p>
-stepPins2 = [IN5,IN6,IN7,IN8]
+stepPins = [IN5,IN6,IN7,IN8]
 
 stepDir = 1        # Set to 1 for clockwise
                         # Set to -1 for anti-clockwise
