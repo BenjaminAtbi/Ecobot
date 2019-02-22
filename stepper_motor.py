@@ -38,7 +38,7 @@ stepCount = len(seq)
 if len(sys.argv)>1: # Read wait time from command line
     waitTime = int(sys.argv[1])/float(1000)
 else:
-    waitTime = 0.004    # 2 miliseconds was the maximun speed got on my tests
+    waitTime = 0.002    # 2 miliseconds was the maximun speed got on my tests
 stepCounter = 0
 while True:                          # Start main loop
     for pin in range(0,4):
