@@ -3,7 +3,7 @@ from time import sleep
 myGPIO = 15
 #myGPIO2 = 22
 myServo = Servo(myGPIO)
-myServo2 = Servo(myGPIO2)
+#myServo2 = Servo(myGPIO2)
 #motor2 = motor(17)
 while True:
     myServo.mid()
