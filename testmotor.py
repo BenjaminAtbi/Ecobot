@@ -19,15 +19,15 @@ sleep(1)
 
 myServo.max()
 myServo2.mid()
-sleep(1)
- 
+
+
 miniFrontGate.max()
 sleep(1)
 miniFrontGate.min()
-sleep(1)
-#rightPick.min()
+
+
+rightPick.min()
 leftPick.max()
 sleep(1)
-#rightPick.min()
+rightPick.min()
 leftPick.min()
-sleep(1)
