@@ -49,22 +49,17 @@ miniFrontGate.min()
 sleep(1)
 '''
 
-miniFrontGate.value = -1
-miniFrontGate.mid()
 miniFrontGate.value = 0
+miniFrontGate.max()
+sleep(1)
+miniFrontGate.min()
 sleep(1)
 
-miniFrontGate.min()
-miniFrontGate.value = -1
-sleep(1)
 
 sleep(3)
 
-leftPick.value = -1
+leftPick.value = 0
 leftPick.max()
-leftPick.value = 1
 sleep(1)
-
 leftPick.min
-leftPick.value = -1
 sleep(1)
