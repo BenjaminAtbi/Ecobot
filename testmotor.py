@@ -38,8 +38,8 @@ while True:
     sleep(0.5)
 
 '''
-rightWheel.value = 0
-leftWheel.value = 0
+rightWheel.value = 1
+leftWheel.value = -1
 
 rightWheel.min()
 leftWheel.max()
