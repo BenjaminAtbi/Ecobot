@@ -13,8 +13,8 @@ rightPick = Servo(myGPIO4)
 leftPick = Servo(myGPIO5)
 
 for i in range(0, 2):
-    rightWheel.max()
-    leftWheel.min()
+    rightWheel.min()
+    leftWheel.max()
 
 
 miniFrontGate.max()
