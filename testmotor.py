@@ -9,28 +9,24 @@ myGPIO6 = 17 #leftbackgate
 myGPIO7 = 18 #rightbackgate
 myGPIO8 = 27 #classifier 
 
-#rightWheel = Servo(myGPIO1)
-#leftWheel = Servo(myGPIO2)
+rightWheel = Servo(myGPIO1)
+leftWheel = Servo(myGPIO2)
 #miniFrontGate = Servo(myGPIO3)
 rightPick = Servo(myGPIO4)
 leftPick = Servo(myGPIO5)
 
+
+rightWheel.min()
+leftWheel.max()
+sleep(10)
+
 '''
-for i in range(0, 2):
-    rightWheel.min()
-    leftWheel.max()
-
-
 miniFrontGate.max()
 sleep(1)
 miniFrontGate.min()
 sleep(1)
 '''
-
-
-#rightPick.max()
 leftPick.max()
 sleep(2)
-#rightPick.min()
 leftPick.min()
 sleep(2)
