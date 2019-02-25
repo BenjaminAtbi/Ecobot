@@ -28,9 +28,9 @@ sleep(1)
 '''
 
 
-rightPick.min()
+#rightPick.min()
 leftPick.max()
 sleep(2)
-rightPick.max()
+#rightPick.max()
 leftPick.min()
 sleep(2)
