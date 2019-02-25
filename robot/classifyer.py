@@ -1,17 +1,25 @@
 import io
 import os
-
 # Imports the Google Cloud client library
 from google.cloud import vision
 from google.cloud.vision import types
 
+class classifyer:
+
+
+    def __init__(self):
+        self.client = vision.ImageAnnotatorClient()
+
+    def classifyimage(self,image):
+        return self.client.label_detection(image=image)
+
 # Instantiates a client
-client = vision.ImageAnnotatorClient()
+
 
 # The name of the image file to annotate
 file_name = os.path.join(
     os.path.dirname(__file__),
-    'testimages\\G05.jpg')
+    '..\\testimages\\130100-Thunderbolt.jpg')
 
 # Loads the image into memory
 with io.open(file_name, 'rb') as image_file:
@@ -20,7 +28,6 @@ with io.open(file_name, 'rb') as image_file:
 image = types.Image(content=content)
 
 # Performs label detection on the image file
-response = client.label_detection(image=image)
-labels = response.label_annotations
+l = classifyer()
 
-print(response)
+print("l:",l,"stuff:",l.classifyimage(image))
