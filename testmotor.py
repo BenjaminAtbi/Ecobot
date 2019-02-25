@@ -12,12 +12,10 @@ miniFrontGate = Servo(myGPIO3)
 rightPick = Servo(myGPIO4)
 leftPick = Servo(myGPIO5)
 
-rightWheel.max()
-leftWheel.min()
-sleep(1)
+for in range(0,2)
+    rightWheel.max()
+    leftWheel.min()
 
-
-'''
 
 miniFrontGate.max()
 sleep(1)
@@ -30,4 +28,3 @@ sleep(2)
 rightPick.max()
 leftPick.min()
 sleep(2)
-'''
