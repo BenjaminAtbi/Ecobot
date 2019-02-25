@@ -12,11 +12,11 @@ myGPIO8 = 27 #classifier
 #rightWheel = Servo(myGPIO1)
 #leftWheel = Servo(myGPIO2)
 #miniFrontGate = Servo(myGPIO3)
-rightPick = Servo(myGPIO4)
+#rightPick = Servo(myGPIO4)
 leftPick = Servo(myGPIO5)
 
-leftPick.value = 0
-rightPick.value = 0
+leftPick.value = -1
+
 '''
 rightWheel.min()
 leftWheel.min()
@@ -28,13 +28,10 @@ sleep(1)
 miniFrontGate.min()
 sleep(1)
 '''
-print("resting")
+
 leftPick.max()
-rightPick.max()
 sleep(2)
-print("max")
 
 leftPick.min()
-rightPick.min()
 sleep(2)
-print('min')
+
