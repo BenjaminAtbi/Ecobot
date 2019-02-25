@@ -11,7 +11,7 @@ myServo2 = Servo(myGPIO2)
 miniFrontGate = Servo(myGPIO3)
 rightPick = Servo(myGPIO4)
 leftPick = Servo(myGPIO5)
-
+'''
 myServo.mid()
 myServo2.max()
 sleep(1)
@@ -19,7 +19,7 @@ sleep(1)
 myServo.max()
 myServo2.mid()
 sleep(1)
-
+'''
 
 miniFrontGate.max()
 sleep(1)
