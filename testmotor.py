@@ -6,14 +6,14 @@ myGPIO3 = 23
 myGPIO4 = 24
 myGPIO5 = 22
 
-myServo = Servo(myGPIO)
-myServo2 = Servo(myGPIO2)
+rightWheel = Servo(myGPIO)
+leftWheel = Servo(myGPIO2)
 miniFrontGate = Servo(myGPIO3)
 rightPick = Servo(myGPIO4)
 leftPick = Servo(myGPIO5)
 
-myServo.max()
-myServo2.max()
+rightWheel.max()
+leftWheel.min()
 sleep(1)
 
 
