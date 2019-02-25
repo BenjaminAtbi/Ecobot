@@ -17,8 +17,8 @@ leftPick = Servo(myGPIO5)
 
 
 rightWheel.min()
-leftWheel.max()
-sleep(10)
+leftWheel.min()
+sleep(3)
 
 '''
 miniFrontGate.max()
