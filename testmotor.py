@@ -1,4 +1,5 @@
 from gpiozero import Servo
+from gpiozero import AngularServo 
 from time import sleep
 myGPIO1 = 4  #right wheel
 myGPIO2 = 25 # left wheel
@@ -9,8 +10,9 @@ myGPIO6 = 17 #leftbackgate
 myGPIO7 = 18 #rightbackgate
 myGPIO8 = 27 #classifier 
 
-rightWheel = Servo(myGPIO1)
 leftWheel = Servo(myGPIO2)
+rightWheel = AngularServo(25, min_angle = 45, max_angle = -45)
+#rightWheel = Servo(myGPIO1)
 #miniFrontGate = Servo(myGPIO3)
 #rightPick = Servo(myGPIO4)
 #leftPick = Servo(myGPIO5)
@@ -73,7 +75,7 @@ sleep(1)
 rightWheel.value = 1
 leftWheel.value = -1
 for i in range(0, 3):
-   
-    rightWheel.min()
+    rightWheel.max()
+    #rightWheel.min()
     leftWheel.max()
     sleep(3)
