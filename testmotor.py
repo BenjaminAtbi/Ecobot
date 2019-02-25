@@ -48,7 +48,7 @@ sleep(1)
 miniFrontGate.min()
 sleep(1)
 '''
-
+'''
 miniFrontGate.value = -1
 miniFrontGate.mid()
 sleep(1)
@@ -62,6 +62,15 @@ leftPick.value = -1
 leftPick.max()
 leftPick.value = 1
 sleep(1)
+leftPick.mid()
+leftPick.value = 0
+sleep(1)
 leftPick.min()
+
 leftPick.value = -1
 sleep(1)
+'''
+
+rightWheel.min()
+leftWheel.max()
+sleep(3)
