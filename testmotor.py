@@ -15,7 +15,7 @@ myGPIO8 = 27 #classifier
 #rightPick = Servo(myGPIO4)
 leftPick = Servo(myGPIO5)
 
-rightPick.value = 0
+leftPick.value = 0
 
 '''
 rightWheel.min()
