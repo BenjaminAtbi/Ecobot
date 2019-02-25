@@ -71,7 +71,7 @@ leftPick.value = -1
 sleep(1)
 '''
 rightWheel.value = 1
-leftWheel.value = 0
+leftWheel.value = -1
 for i in range(0, 3):
    
     rightWheel.min()
