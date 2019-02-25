@@ -42,7 +42,7 @@ rightWheel.value = 0
 leftWheel.value = 0
 
 rightWheel.min()
-leftWheel.min()
+leftWheel.max()
 sleep(3)
 
 '''
