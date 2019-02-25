@@ -70,7 +70,7 @@ leftPick.min()
 leftPick.value = -1
 sleep(1)
 '''
-while(True):
+for i in range(0, 3):
     rightWheel.min()
     leftWheel.max()
     sleep(3)
