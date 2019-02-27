@@ -37,14 +37,14 @@ from enum import Enum
 # stop -> .value = -0.2
 
 
-    leftArmGPIO = 17 # leftArm 
-    rightArmGPIO = 18 # rightArm
-    leftBackGateGPIO = 27 # LeftBackGate
-    leftWheelGPIO = 22 # leftWheel
-    rightBackGateGPIO = 23 # rightBackGate
-    sorterGPIO = 24 # sorter
-    rightWheelGPIO = 25 # rightWheel
-    frontGateGPIO = 4  # frontGate
+leftArmGPIO = 17 # leftArm 
+rightArmGPIO = 18 # rightArm
+leftBackGateGPIO = 27 # LeftBackGate
+leftWheelGPIO = 22 # leftWheel
+rightBackGateGPIO = 23 # rightBackGate
+sorterGPIO = 24 # sorter
+rightWheelGPIO = 25 # rightWheel
+frontGateGPIO = 4  # frontGate
 
 # controls motor functions
 class MotorController:
@@ -58,8 +58,8 @@ class MotorController:
         self.leftBackGate = Servo(leftBackGateGPIO)
         self.rightArm = Servo(rightArmGPIO)
         self.rightWheel = Servo(rightWheelGPIO)
-        self.rightBackGate = Servo(rightBackGate)
-        self.sorter = Servo(Sorter)
+        self.rightBackGate = Servo(rightBackGateGPIO)
+        self.sorter = Servo(sorterGPIO)
         self.frontGate = Servo(frontGateGPIO)
 
         # requires input of angles
