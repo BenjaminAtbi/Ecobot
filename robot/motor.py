@@ -37,11 +37,6 @@ from enum import Enum
 # stop -> .value = -0.2
 
 
-
-
-# controls motor functions
-class MotorController:
-
     leftArmGPIO = 17 # leftArm 
     rightArmGPIO = 18 # rightArm
     leftBackGateGPIO = 27 # LeftBackGate
@@ -50,6 +45,11 @@ class MotorController:
     sorterGPIO = 24 # sorter
     rightWheelGPIO = 25 # rightWheel
     frontGateGPIO = 4  # frontGate
+
+# controls motor functions
+class MotorController:
+
+    
 
     def __init__(self):
         
