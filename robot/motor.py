@@ -37,7 +37,7 @@ from enum import Enum
 # stop -> .value = -0.2
 
 
-    leftArmGPIO = 17 # leftArm 
+leftArmGPIO = 17 # leftArm 
     rightArmGPIO = 18 # rightArm
     leftBackGateGPIO = 27 # LeftBackGate
     leftWheelGPIO = 22 # leftWheel
@@ -159,13 +159,28 @@ class MotorController:
         self.frontGate.min()
 
 
-m = MotorController()
-m.armDown()
-m.gateOpen()
-m.forward(1)
-m.backward(1)
-m.gateClose()
-m.armUp()
+    def initialize(self):
+        self.armDown()
+        self.gateOpen()
+        self.leftGateClose()
+        self.rightGateClose()
+        self.sorterMid()
+
+    def Load(self):
+        self.gateClose()
+        sleep(.3)
+        self.armup()
+        sleep(2)
+        self.armDown()
+        self.gateOpen()
+
+# m = MotorController()
+# m.armDown()
+# m.gateOpen()
+# m.forward(1)
+# m.backward(1)
+# m.gateClose()
+# m.armUp()
 
 
 #represents a motor designed to swap between various pre-set angles
