@@ -11,8 +11,8 @@ ap.add_argument("-v", "--video",
                 help="path to the (Optional) video file")
 args = vars(ap.parse_args())
 
-blueBinLower = np.array([10, 150, 165], dtype="uint8")
-blueBinHigher = np.array([35, 230, 230], dtype="uint8")
+blueBinLower = np.array([185, 165, 150], dtype="uint8")
+blueBinHigher = np.array([210, 200, 180], dtype="uint8")
 
 if args.get("video", None) is None:
     camera = VideoStream(src=0).start()
