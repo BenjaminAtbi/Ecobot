@@ -1,4 +1,4 @@
-from motor import Motor
+from motor import MotorController
 from field import Field
 from vision import sorter
 import states as st
@@ -6,9 +6,11 @@ import states as st
 class robot: 
 
 
+# ultrasonic 20,21
+
     def __init__(self): 
         #initialize modules
-        self.motor = Motor()
+        self.motor = MotorController()
         self.field = Field(20)
         self.sorter = sorter()
         self.initializeStates()
