@@ -53,7 +53,6 @@ class MotorController:
 
     def __init__(self):
         
-        self.leftArm = Servo(leftArmGPIO)
         self.leftWheel = Servo(leftWheelGPIO)
         self.leftBackGate = Servo(leftBackGateGPIO)
         self.rightArm = Servo(rightArmGPIO)
