@@ -159,13 +159,28 @@ class MotorController:
         self.frontGate.min()
 
 
-m = MotorController()
-m.armDown()
-m.gateOpen()
-m.forward(1)
-m.backward(1)
-m.gateClose()
-m.armUp()
+    def initialize(self):
+        self.armDown()
+        self.gateOpen()
+        self.leftGateClose()
+        self.rightGateClose()
+        self.sorterMid()
+
+    def Load(self):
+        self.gateClose()
+        sleep(.3)
+        self.armup()
+        sleep(2)
+        self.armDown()
+        self.gateOpen()
+
+# m = MotorController()
+# m.armDown()
+# m.gateOpen()
+# m.forward(1)
+# m.backward(1)
+# m.gateClose()
+# m.armUp()
 
 
 #represents a motor designed to swap between various pre-set angles
