@@ -199,7 +199,7 @@ class MotorController:
             else:
                robot.motor.sorterRight()
             sleep(.2)
-        sorter.sorterMid()
+        robot.motor.sorterMid()
 
 #represents a motor designed to swap between various pre-set angles
 
