@@ -23,7 +23,7 @@ class seek():
     
     def run(self,robot):
         robot.motor.gateOpen()
-        robot.motor.forwardDist(robot.runnum * robot.rundist)
+        robot.motor.forwardDist(robot.runnum * robot.rundist + 10)
         robot.motor.gateClose()
         robot.motor.load(robot)
         robot.motor.armDown()
@@ -41,13 +41,13 @@ class retrace():
     
     def run(self,robot):
         
-       robot.motor.forwardDist((robot.runnum * robot.rundist * 0.7) - robot.armlength )
+       robot.motor.forwardDist(((robot.runnum * robot.rundist +10)* 0.7) - robot.armlength )
        robot.motor.gateClose()
        robot.motor.load(robot)
        robot.motor.forwardDist(robot.armlength)
-       robot.motor.backwardDist(robot.width)
+       robot.motor.backDist(robot.width)
        robot.motor.AngleRight(90)
-       robot.motor.backDist(robot.runnum * robot.rundist * 0.7 + .5)
+       robot.motor.backDist(((robot.runnum * robot.rundist +10) * 0.7) + .5)
        robot.state = unload()
        print "retrace"
 
