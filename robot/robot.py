@@ -11,9 +11,15 @@ class robot:
     def __init__(self): 
         #initialize modules
         self.motor = MotorController()
-        self.field = Field(20)
-        self.sorter = sorter()
+        # self.field = Field(20)
+        # self.sorter = sorter()
         self.initializeStates()
+        self.runnum = 0
+        self.diagonal = False
+
+        self.rundist = 0
+        self.armlength = 0
+        self.width = 0
         
     #initialize state options
     def initializeStates(self):
@@ -32,8 +38,9 @@ class robot:
     def coreloop(self):
         while(True):
             
-            self.field.read()
+            # self.field.read()
             self.state.run(self)
 
 
 bot = robot()
+bot.coreloop()

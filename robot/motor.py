@@ -68,35 +68,18 @@ class MotorController:
     # RIGHT BACK GATE
 # closed ->  max()
 # open -> mid() 
-    def rightGateClose(self):
-        self.rightBackGate.max()
 
-    def rightGateOpen(self):
-        self.rightBackGate.mid()
 
 # LEFT BACK GATE
 # closed -> min() 
 # open -> mid()     
 
-    def leftGateClose(self):
-        self.leftBackGate.min()
-
-    def leftGateOpen(self):
-        self.leftBackGate.mid()
 
 # SORTER
 # left -> min()
 # middle -> .value = -0.5
 # right -> .value = 0
 
-    def sorterLeft(self):
-        self.sorter.min()
-
-    def sorterRight(self):
-        self.sorter.value = 0
-
-    def sorterMid(self):
-        self.sorter.value = -0.5
 
 
 # RIGHT ARM
@@ -106,17 +89,6 @@ class MotorController:
 # down -> .value = -0.5
 #       sleep .7
 #       .value = -0.2
-
-
-    def armUp(self):
-        self.rightArm.value = 0.2
-        sleep(.5)
-        self.value = -0.2
-
-    def armDown(self):
-        self.rightArm.value = -0.5
-        sleep(.7)
-        self.value = -0.2 
 
 # LEFT MOTOR
 # forward -> .value = 0.2
@@ -128,10 +100,42 @@ class MotorController:
 # backward -> .value = 0.2
 # stop -> .value = -0.2
 
+    def rightGateClose(self):
+        self.rightBackGate.max()
+
+    def rightGateOpen(self):
+        self.rightBackGate.mid()
+
+    def leftGateClose(self):
+        self.leftBackGate.min()
+
+    def leftGateOpen(self):
+        self.leftBackGate.mid()
+
+
+    def sorterLeft(self):
+        self.sorter.min()
+
+    def sorterRight(self):
+        self.sorter.value = 0
+
+    def sorterMid(self):
+        self.sorter.value = -0.5
+
+    def armUp(self):
+        self.rightArm.value = 0.2
+        sleep(.5)
+        self.value = -0.2
+
+    def armDown(self):
+        self.rightArm.value = -0.5
+        sleep(.7)
+        self.value = -0.2 
+
     def pause(self):
         self.leftWheel.value = -0.2
         self.rightWheel.value = -0.2
-        sleep(0.1)
+        sleep(1)
 
     def forward(self,length):
         self.leftWheel.value = 0.2
@@ -165,6 +169,7 @@ class MotorController:
 
 
     def initialize(self):
+        self.pause()
         self.armDown()
         self.gateOpen()
         self.leftGateClose()
@@ -175,10 +180,16 @@ class MotorController:
         self.gateClose()
         sleep(.3)
         self.armUp()
-        sleep(2)
-        self.armDown()
-        self.gateOpen()
-
+        bool left = false
+        for i in range(10):
+            left = not left
+            if(left){
+               robot.sorterLeft()
+            } else {
+               robot.sorterRight()
+            }
+            sleep(.2)
+        sorter.sorterMid()
 
 #represents a motor designed to swap between various pre-set angles
 
