@@ -175,18 +175,17 @@ class MotorController:
         self.rightGateClose()
         self.sorterMid()
 
-    def load(self):
+    def load(self,robot):
         self.gateClose()
         sleep(.3)
         self.armUp()
-        left = new bool(false)
+        left = bool(False)
         for i in range(10):
             left = not left
-            if(left){
+            if left:
                robot.sorterLeft()
-            } else {
+            else:
                robot.sorterRight()
-            }
             sleep(.2)
         sorter.sorterMid()
 
