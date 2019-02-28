@@ -1,15 +1,13 @@
 from time import sleep
 
 class state():
-    def __init__(self):
-        i = 1
+    # def __init__(self):
+    #     i = 1
 
     def run(self,robot):
         raise AssertionError("Using base form of State")
 
-class initial(state):
-    def __init__(self):
-        super().__init__(self)
+class initial():
     
     def run(self,robot):
         robot.AngleRight(45)
@@ -17,9 +15,9 @@ class initial(state):
         robot.state = seek()
         # leave bay
 
-class seek(state):
-    def __init__(self):
-        super().__init__(self)
+class seek():
+    # def __init__(self):
+    #     super().__init__(self)
     
     def run(self,robot):
         robot.motor.gateOpen()
@@ -34,9 +32,9 @@ class seek(state):
         # turn into the ring
         # go forward
 
-class retrace(state):
-    def __init__(self):
-        super().__init__(self)
+class retrace():
+    # def __init__(self):
+    #     super().__init__(self)
     
     def run(self,robot):
         
@@ -50,9 +48,9 @@ class retrace(state):
        robot.state = unload()
 
 
-class unload(state):
-    def __init__(self):
-        super().__init__(self)
+class unload():
+    # def __init__(self):
+    #     super().__init__(self)
     
     def run(self,robot):
         
