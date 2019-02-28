@@ -12,7 +12,7 @@ class initial(state):
     def run(self,robot):
         robot.AngleRight(45)
         robot.runnum = robot.runnum + 1
-        robot.state = robot.states["seek"]
+        robot.state = seek()
         # leave bay
 
 class seek(state):
@@ -27,7 +27,7 @@ class seek(state):
         robot.motor.armDown()
         robot.motor.AngleLeft(135)
         robot.motor.gateOpen()
-        robot.state = robot.states["retrace"]
+        robot.state = retrace()
 
         # turn into the ring
         # go forward
@@ -45,7 +45,7 @@ class retrace(state):
        robot.motor.backwardDist(robot.width)
        robot.motor.AngleRight(90)
        robot.motor.BackDist(robot.runnum * robot.rundist * 0.7)
-       robot.state = robot.states["unload"]
+       robot.state = unload()
 
 
 class unload(state):
@@ -59,4 +59,4 @@ class unload(state):
         sleep(2)
         robot.motor.leftGateClose()
         robot.motor.RightGateClose()
-        robot.state = robot.states["initial"]
+        robot.state = initial()

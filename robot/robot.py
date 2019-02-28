@@ -21,13 +21,8 @@ class robot:
         
     #initialize state options
     def initializeStates(self):
-        self.states = dict()
-        self.states['initial'] = st.initial()
-        self.states['seek'] = st.seek()
-        self.states['retrace'] = st.retrace()
-        self.states['unload'] = st.unload()
 
-        self.state = self.states['initial']
+        self.state = st.initial()
 
     #main program loop
     def coreloop(self):
