@@ -10,7 +10,8 @@ class state():
 class initial():
     
     def run(self,robot):
-        robot.AngleRight(45)
+        robot.motor.armDown()
+        robot.motor.AngleRight(45)
         robot.runnum = robot.runnum + 1
         robot.state = seek()
         # leave bay
@@ -44,7 +45,7 @@ class retrace():
        robot.motor.forwardDist(robot.armlength)
        robot.motor.backwardDist(robot.width)
        robot.motor.AngleRight(90)
-       robot.motor.BackDist(robot.runnum * robot.rundist * 0.7)
+       robot.motor.backDist(robot.runnum * robot.rundist * 0.7 + .5)
        robot.state = unload()
 
 

@@ -26,7 +26,7 @@ class robot:
 
     #main program loop
     def coreloop(self):
-        while(True):
+        while self.runnum < 5:
             
             # self.field.read()
             self.state.run(self)
