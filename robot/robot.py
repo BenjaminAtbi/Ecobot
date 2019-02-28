@@ -15,9 +15,9 @@ class robot:
         self.runnum = 0
         self.diagonal = False
 
-        self.rundist = 0
-        self.armlength = 0
-        self.width = 0
+        self.rundist = 4
+        self.armlength = 2
+        self.width = 1
         
     #initialize state options
     def initializeStates(self):
