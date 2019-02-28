@@ -13,7 +13,7 @@ class initial():
         try:
             robot.motor.armDown()
             robot.motor.forward(.5)
-            robot.motor.AngleRight(45)
+            # robot.motor.AngleRight(45)
             robot.runnum = robot.runnum + 1
             robot.state = seek()
             print("inital")
@@ -66,10 +66,10 @@ class unload():
     def run(self,robot):
         try:
             robot.motor.leftGateOpen()
-            robot.motor.RightGateOpen()
+            robot.motor.rightGateOpen()
             sleep(2)
             robot.motor.leftGateClose()
-            robot.motor.RightGateClose()
+            robot.motor.rightGateClose()
             robot.state = initial()
             print("unload")
         except Exception as e: 
