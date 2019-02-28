@@ -160,7 +160,7 @@ class MotorController:
         sleep(length)
         self.pause()
 
-    def Angleleft(self,length):
+    def AngleLeft(self,length):
         self.left(length/90 * 2.5)
     
     def AngleRight(self,length):
