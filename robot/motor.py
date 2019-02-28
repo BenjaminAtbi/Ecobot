@@ -179,7 +179,7 @@ class MotorController:
         self.gateClose()
         sleep(.3)
         self.armUp()
-        bool left = new bool(false)
+        left = new bool(false)
         for i in range(10):
             left = not left
             if(left){

@@ -1,4 +1,4 @@
-import time import sleep
+from time import sleep
 
 class state:
 
