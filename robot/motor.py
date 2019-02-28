@@ -195,9 +195,9 @@ class MotorController:
         for i in range(10):
             left = not left
             if left:
-               robot.sorterLeft()
+               robot.motor.sorterLeft()
             else:
-               robot.sorterRight()
+               robot.motor.sorterRight()
             sleep(.2)
         sorter.sorterMid()
 
