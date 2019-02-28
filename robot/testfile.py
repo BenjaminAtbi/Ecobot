@@ -3,6 +3,5 @@ import motor as m
 motor = m.MotorController()
 motor.initialize()
 
+motor.right(2.5)
 
-motor.forward(5)
-motor.backward(2)
