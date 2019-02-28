@@ -160,6 +160,18 @@ class MotorController:
         sleep(length)
         self.pause()
 
+    def Angleleft(self,length):
+        self.left(length/90 * 2.5)
+    
+    def AngleRight(self,length):
+        self.right(length/90 * 2.5)
+
+    def forwardDist(self, length):
+        self.forward(length)
+
+    def backDist(self, length):
+        self.backward(length)
+
     def gateOpen(self):
         self.frontGate.max()
 
