@@ -1,6 +1,8 @@
 from time import sleep
 
 class state():
+    def __init__(self):
+        i = 1
 
     def run(self,robot):
         raise AssertionError("Using base form of State")
