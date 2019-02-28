@@ -12,14 +12,12 @@ class initial():
     def run(self,robot):
         try:
             robot.motor.armDown()
-            robot.motor.forward(.5)
             robot.motor.AngleRight(45)
             robot.runnum = robot.runnum + 1
             robot.state = seek()
             print("inital")
             # leave bay
         except Exception:
-            print("error")
 
 class seek():
     # def __init__(self):
@@ -28,7 +26,7 @@ class seek():
     def run(self,robot):
         try:
             robot.motor.gateOpen()
-            robot.motor.forwardDist(robot.runnum * robot.rundist + 6)
+            robot.motor.forwardDist(robot.runnum * robot.rundist + 10)
             robot.motor.gateClose()
             robot.motor.load(robot)
             robot.motor.armDown()
@@ -37,7 +35,6 @@ class seek():
             robot.state = retrace()
             print("seek")
         except Exception:
-            print("error")
         # turn into the ring
         # go forward
 
@@ -47,17 +44,16 @@ class retrace():
     
     def run(self,robot):
         try:
-            robot.motor.forwardDist(((robot.runnum * robot.rundist +6)* 0.7) - robot.armlength )
+            robot.motor.forwardDist(((robot.runnum * robot.rundist +10)* 0.7) - robot.armlength )
             robot.motor.gateClose()
             robot.motor.load(robot)
             robot.motor.forwardDist(robot.armlength)
             robot.motor.backDist(robot.width)
             robot.motor.AngleRight(90)
-            robot.motor.backDist(((robot.runnum * robot.rundist +6) * 0.7) + .5)
+            robot.motor.backDist(((robot.runnum * robot.rundist +10) * 0.7) + .5)
             robot.state = unload()
             print("retrace")
         except Exception:
-            print("error")
 
 class unload():
     # def __init__(self):
@@ -73,4 +69,3 @@ class unload():
             robot.state = initial()
             print("unload")
         except Exception:
-            print("error")
